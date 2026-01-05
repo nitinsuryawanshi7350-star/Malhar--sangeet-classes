@@ -59,22 +59,10 @@
             width: 100%;
         }
 
-        .submit-btn:hover {
-            background-color: #e65100;
-        }
-
         .error {
             color: red;
             font-size: 14px;
             margin-top: 10px;
-        }
-
-        footer {
-            background-color: #222;
-            color: #bbb;
-            text-align: center;
-            padding: 14px;
-            margin-top: 40px;
         }
     </style>
 </head>
@@ -111,10 +99,6 @@
     </div>
 </section>
 
-<footer>
-    © 2026 संगीत क्लासेस | All Rights Reserved
-</footer>
-
 <script>
 function validateForm() {
     var mobile = document.getElementById("mobile").value;
@@ -123,16 +107,15 @@ function validateForm() {
 
     error.innerHTML = "";
 
-    // Mobile number validation
+    // Mobile validation
     if (!/^\d{10}$/.test(mobile)) {
         error.innerHTML = "❌ Mobile number 10 digit असायलाच हवा";
         return false;
     }
 
-    // DOB & Age validation
+    // Age validation
     var birthDate = new Date(dob);
     var today = new Date();
-
     var age = today.getFullYear() - birthDate.getFullYear();
     var m = today.getMonth() - birthDate.getMonth();
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
@@ -140,11 +123,11 @@ function validateForm() {
     }
 
     if (age < 13 || age > 70) {
-        error.innerHTML = "❌ वय किमान 13 आणि जास्तीत जास्त 70 वर्षे असावे";
+        error.innerHTML = "❌ वय किमान 13 ते 70 वर्षे असावे";
         return false;
     }
 
-    // If all valid → redirect
+    // Redirect to pay.html
     window.location.href = "pay.html";
     return false;
 }
