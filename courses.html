@@ -19,26 +19,27 @@
             text-align: center;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 32px;
-        }
-
-        .back-btn {
+        .top-buttons {
             margin-top: 15px;
         }
 
-        .back-btn a {
+        .top-buttons a {
             text-decoration: none;
         }
 
-        .back-btn button {
+        .enroll-btn {
             background-color: #ff9800;
-            border: none;
-            padding: 8px 18px;
             color: white;
-            border-radius: 5px;
+            border: none;
+            padding: 12px 26px;
+            font-size: 17px;
+            border-radius: 8px;
             cursor: pointer;
+            margin: 5px;
+        }
+
+        .enroll-btn:hover {
+            background-color: #e65100;
         }
 
         section {
@@ -55,34 +56,16 @@
             text-align: center;
         }
 
-        .course-card h2 {
-            color: #4a148c;
-            font-size: 28px;
-            margin-bottom: 10px;
-        }
-
-        .price {
-            margin: 20px 0;
-            font-size: 20px;
-        }
-
         .old-price {
             text-decoration: line-through;
             color: #999;
-            margin-right: 10px;
+            font-size: 18px;
         }
 
         .new-price {
             color: #2e7d32;
             font-size: 26px;
             font-weight: bold;
-        }
-
-        .course-card p {
-            color: #555;
-            font-size: 16px;
-            line-height: 1.7;
-            margin: 20px 0;
         }
 
         .whatsapp-btn {
@@ -93,11 +76,7 @@
             font-size: 17px;
             border-radius: 8px;
             cursor: pointer;
-            transition: 0.3s;
-        }
-
-        .whatsapp-btn:hover {
-            background-color: #1ebe5d;
+            margin-top: 20px;
         }
 
         footer {
@@ -115,9 +94,12 @@
 <header>
     <h1>🎹 हार्मोनियम कोर्स</h1>
 
-    <div class="back-btn">
+    <div class="top-buttons">
+        <a href="enroll.html">
+            <button class="enroll-btn">Enroll Now</button>
+        </a>
         <a href="index.html">
-            <button>← Back to Home</button>
+            <button class="enroll-btn">Home</button>
         </a>
     </div>
 </header>
@@ -127,16 +109,16 @@
 
         <h2>Professional Harmonium Course</h2>
 
-        <div class="price">
+        <p>
             <span class="old-price">₹ 2000</span>
+            &nbsp;
             <span class="new-price">₹ 1499</span>
-        </div>
+        </p>
 
         <p>
-            बेसिक पासून अ‍ॅडव्हान्स हार्मोनियम वादनाचे
-            संपूर्ण व्यावसायिक प्रशिक्षण.  
-            स्केल्स, राग, भक्ती संगीत संगती,
-            आणि स्टेज परफॉर्मन्ससाठी मार्गदर्शन.
+            बेसिक ते अ‍ॅडव्हान्स हार्मोनियम प्रशिक्षण.  
+            स्केल्स, राग, भक्ती संगीत, स्टेज परफॉर्मन्स
+            साठी संपूर्ण मार्गदर्शन.
         </p>
 
         <a href="https://wa.me/917350712714" target="_blank">
@@ -144,10 +126,6 @@
                 📲 WhatsApp वर संपर्क करा
             </button>
         </a>
-
-        <p style="margin-top: 15px; font-size: 14px; color: #777;">
-            (Admission साठी WhatsApp वर मेसेज करा)
-        </p>
 
     </div>
 </section>
