@@ -9,59 +9,64 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background-color: #f5f5f5;
         }
 
         header {
-            background: #4a148c;
+            background-color: #4a148c;
             color: white;
-            padding: 20px;
+            padding: 25px;
             text-align: center;
         }
 
         header h1 {
             margin: 0;
-            font-size: 30px;
+            font-size: 32px;
         }
 
-        nav {
+        header p {
+            margin: 5px 0 0;
+            font-size: 16px;
+        }
+
+        .menu {
             margin-top: 15px;
         }
 
-        nav a {
-            text-decoration: none;
+        .menu button {
+            background-color: #ff9800;
             color: white;
-            background: #ff9800;
-            padding: 10px 18px;
+            border: none;
+            padding: 10px 20px;
             margin: 5px;
+            font-size: 16px;
             border-radius: 5px;
-            display: inline-block;
-            font-weight: bold;
+            cursor: pointer;
         }
 
-        nav a:hover {
-            background: #e65100;
+        .menu button:hover {
+            background-color: #e65100;
         }
 
-        .container {
+        section {
             padding: 30px;
             text-align: center;
         }
 
-        .container h2 {
+        section h2 {
             color: #333;
         }
 
-        .container p {
-            font-size: 16px;
+        section p {
             color: #555;
             max-width: 700px;
             margin: auto;
+            font-size: 16px;
         }
 
         footer {
-            background: #222;
-            color: #aaa;
+            background-color: #222;
+            color: #bbb;
             text-align: center;
             padding: 12px;
             position: fixed;
@@ -74,27 +79,27 @@
 <body>
 
 <header>
-    <h1>🎵 संगीत क्लासेस</h1>
-    <p>Music Learning Website</p>
+    <h1>🎶 संगीत क्लासेस</h1>
+    <p>Professional Music Learning Platform</p>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="courses.html">Courses</a>
-        <a href="contact.html">Contact</a>
-    </nav>
+    <div class="menu">
+        <button>Home</button>
+        <button>Courses</button>
+        <button>Contact</button>
+    </div>
 </header>
 
-<div class="container">
-    <h2>Welcome to Our Music Classes</h2>
+<section>
+    <h2>Welcome</h2>
     <p>
-        येथे गायन, वादन आणि संगीत शिक्षणासाठी प्रोफेशनल कोर्सेस उपलब्ध आहेत.
-        Beginner ते Advanced स्तरासाठी मार्गदर्शन दिले जाते.
+        आमच्या संगीत क्लासेस मध्ये गायन, वादन व संगीताचे मूलभूत ते प्रगत
+        प्रशिक्षण दिले जाते. Beginner आणि Advanced विद्यार्थ्यांसाठी योग्य.
     </p>
-</div>
+</section>
 
 <footer>
     © 2026 संगीत क्लासेस | All Rights Reserved
 </footer>
 
 </body>
-  </html>
+</html>
