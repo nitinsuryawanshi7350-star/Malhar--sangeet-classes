@@ -13,35 +13,41 @@
         }
 
         header {
-            background-color: #4a148c;
+            background: linear-gradient(135deg, #4a148c, #7b1fa2);
             color: white;
-            padding: 25px;
+            padding: 30px;
             text-align: center;
         }
 
         header h1 {
             margin: 0;
-            font-size: 32px;
+            font-size: 34px;
         }
 
         header p {
-            margin: 5px 0 0;
+            margin-top: 8px;
             font-size: 16px;
+            opacity: 0.9;
         }
 
         .menu {
-            margin-top: 15px;
+            margin-top: 20px;
+        }
+
+        .menu a {
+            text-decoration: none;
         }
 
         .menu button {
             background-color: #ff9800;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 10px 22px;
             margin: 5px;
             font-size: 16px;
-            border-radius: 5px;
+            border-radius: 6px;
             cursor: pointer;
+            transition: 0.3s;
         }
 
         .menu button:hover {
@@ -49,29 +55,29 @@
         }
 
         section {
-            padding: 30px;
+            padding: 40px 20px;
             text-align: center;
         }
 
         section h2 {
             color: #333;
+            font-size: 26px;
         }
 
         section p {
             color: #555;
-            max-width: 700px;
+            max-width: 800px;
             margin: auto;
             font-size: 16px;
+            line-height: 1.6;
         }
 
         footer {
             background-color: #222;
             color: #bbb;
             text-align: center;
-            padding: 12px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+            padding: 14px;
+            margin-top: 40px;
         }
     </style>
 </head>
@@ -83,17 +89,26 @@
     <p>Professional Music Learning Platform</p>
 
     <div class="menu">
-        <button>Home</button>
-        <button>Courses</button>
-        <button>Contact</button>
+        <a href="index.html"><button>Home</button></a>
+        <a href="courses.html"><button>Courses</button></a>
+        <a href="#contact"><button>Contact</button></a>
     </div>
 </header>
 
 <section>
     <h2>Welcome</h2>
     <p>
-        आमच्या संगीत क्लासेस मध्ये गायन, वादन व संगीताचे मूलभूत ते प्रगत
-        प्रशिक्षण दिले जाते. Beginner आणि Advanced विद्यार्थ्यांसाठी योग्य.
+        आमच्या संगीत क्लासेसमध्ये गायन, वादन आणि संगीताचे मूलभूत
+        ते प्रगत प्रशिक्षण दिले जाते. अनुभवी गुरुजींकडून
+        वैयक्तिक लक्ष देऊन शिकवले जाते.
+    </p>
+</section>
+
+<section id="contact">
+    <h2>संपर्क</h2>
+    <p>
+        📞 मोबाईल: 9XXXXXXXXX <br>
+        📍 पत्ता: आपले शहर / गाव
     </p>
 </section>
 
