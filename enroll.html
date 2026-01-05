@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <title>Enroll | हार्मोनियम कोर्स</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #4a148c;
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        section {
+            padding: 40px 20px;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .form-box {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            font-size: 15px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        .submit-btn {
+            margin-top: 25px;
+            background-color: #ff9800;
+            color: white;
+            border: none;
+            padding: 12px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .submit-btn:hover {
+            background-color: #e65100;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+
+        footer {
+            background-color: #222;
+            color: #bbb;
+            text-align: center;
+            padding: 14px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Enroll – हार्मोनियम कोर्स</h1>
+</header>
+
+<section>
+    <div class="form-box">
+        <form onsubmit="return validateForm()">
+
+            <label>Name :</label>
+            <input type="text" id="name" required>
+
+            <label>DOB :</label>
+            <input type="date" id="dob" required>
+
+            <label>Qualification :</label>
+            <input type="text" id="qualification" required>
+
+            <label>Mobile Number :</label>
+            <input type="text" id="mobile" placeholder="10 digit mobile number" required>
+
+            <div id="error" class="error"></div>
+
+            <button type="submit" class="submit-btn">
+                Submit & Continue
+            </button>
+
+        </form>
+    </div>
+</section>
+
+<footer>
+    © 2026 संगीत क्लासेस | All Rights Reserved
+</footer>
+
+<script>
+function validateForm() {
+    var mobile = document.getElementById("mobile").value;
+    var dob = document.getElementById("dob").value;
+    var error = document.getElementById("error");
+
+    error.innerHTML = "";
+
+    // Mobile number validation
+    if (!/^\d{10}$/.test(mobile)) {
+        error.innerHTML = "❌ Mobile number 10 digit असायलाच हवा";
+        return false;
+    }
+
+    // DOB & Age validation
+    var birthDate = new Date(dob);
+    var today = new Date();
+
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+
+    if (age < 13 || age > 70) {
+        error.innerHTML = "❌ वय किमान 13 आणि जास्तीत जास्त 70 वर्षे असावे";
+        return false;
+    }
+
+    // If all valid → redirect
+    window.location.href = "payment.html";
+    return false;
+}
+</script>
+
+</body>
+</html>
