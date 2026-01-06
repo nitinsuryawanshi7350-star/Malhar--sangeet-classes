@@ -2,66 +2,94 @@
 <html lang="mr">
 <head>
     <meta charset="UTF-8">
-    <title>Pay | हार्मोनियम कोर्स</title>
+    <title>Payment - Harmonium Course</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background: #f4f6f8;
         }
 
         header {
-            background: linear-gradient(135deg, #4a148c, #7b1fa2);
+            background: #2e7d32;
             color: white;
-            padding: 25px;
+            padding: 20px;
             text-align: center;
         }
 
         section {
-            padding: 40px 20px;
-            max-width: 600px;
-            margin: auto;
-        }
-
-        .payment-box {
+            max-width: 500px;
+            margin: 30px auto;
             background: white;
-            padding: 30px;
+            padding: 25px;
             border-radius: 12px;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             text-align: center;
         }
 
-        .qr-box img {
-            width: 220px;
-            height: 220px;
-            margin: 20px 0;
-            border: 2px solid #ddd;
-            border-radius: 10px;
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
         }
 
-        .amount {
+        .price {
             font-size: 22px;
+            margin: 10px 0;
+        }
+
+        .price del {
+            color: #999;
+        }
+
+        .price span {
             color: #2e7d32;
             font-weight: bold;
         }
 
-        .note {
-            font-size: 14px;
+        img {
+            width: 220px;
+            margin: 20px 0;
+        }
+
+        .pay-btn {
+            background: linear-gradient(135deg, #1976d2, #43a047);
+            color: white;
+            padding: 16px 28px;
+            font-size: 18px;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+
+        .pay-btn:hover {
+            opacity: 0.9;
+        }
+
+        .help {
+            margin-top: 20px;
+            font-size: 15px;
             color: #555;
+        }
+
+        .whatsapp {
             margin-top: 10px;
         }
 
-        .whatsapp-btn {
-            background-color: #25D366;
-            color: white;
-            border: none;
-            padding: 14px 24px;
-            font-size: 16px;
-            border-radius: 8px;
-            cursor: pointer;
+        .whatsapp a {
+            text-decoration: none;
+            color: #25D366;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
             margin-top: 25px;
+            font-size: 13px;
+            color: #777;
         }
     </style>
 </head>
@@ -70,33 +98,44 @@
 
 <header>
     <h1>💳 Payment</h1>
-    <p>हार्मोनियम कोर्स Enrollment</p>
+    <p>Harmonium Course Admission</p>
 </header>
 
 <section>
-    <div class="payment-box">
+    <h2>हार्मोनियम कोर्स</h2>
 
-        <h2>Scan & Pay</h2>
+    <div class="price">
+        <del>₹2000</del> &nbsp;
+        <span>₹1499</span>
+    </div>
 
-        <div class="qr-box">
-            <img src="qr.png" alt="UPI QR Code">
-        </div>
+    <p>खाली QR scan करा किंवा Pay बटनवर क्लिक करा</p>
 
-        <p class="amount">Amount: ₹ 1499</p>
+    <!-- QR Code Image -->
+    <img src="qr.png" alt="UPI QR Code">
 
-        <p class="note">
-            QR Code Scan करून Payment करा.<br>
-            Payment पूर्ण झाल्यावर WhatsApp वर confirm करा.
-        </p>
+    <!-- Auto Payment Button -->
+    <br>
+    <a href="upi://pay?pa=nitinsuryawanshi8@ybl&pn=MusicClasses&am=1499&cu=INR">
+        <button class="pay-btn">
+            📲 Pay ₹1499 (PhonePe / GPay)
+        </button>
+    </a>
 
-        <a href="https://wa.me/917350712714?text=Hello%20Sir,%20I%20have%20completed%20payment%20for%20Harmonium%20Course.%20Please%20confirm." target="_blank">
-            <button class="whatsapp-btn">
-                ✅ Payment Done – WhatsApp Confirm
-            </button>
+    <div class="help">
+        Payment झाल्यानंतर Screenshot WhatsApp करा
+    </div>
+
+    <div class="whatsapp">
+        <a href="https://wa.me/917350712714" target="_blank">
+            💬 WhatsApp Help: 7350712714
         </a>
-
     </div>
 </section>
+
+<footer>
+    © 2026 संगीत क्लासेस | All Rights Reserved
+</footer>
 
 </body>
 </html>
